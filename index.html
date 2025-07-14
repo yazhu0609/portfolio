@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="starlogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,6 +15,12 @@
         <a href="#home">
             <img src="images/starlogo.svg" alt="雅筑的網站logo" class="header-icon" />
         </a>
+        <!-- 漢堡選單-->
+        <button class="menu-btn">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </button>
         <!-- 導覽列-->
         <nav>
             <ul class="header-nav">
@@ -43,10 +50,10 @@
                 <h3 class="section-heading">關於我</h3>
                 <div class="about-section">
                     <p>
-                        你好，我是就讀輔仁大學 醫學資訊學程的余雅筑。
+                        您好，我的名字是余雅筑，就讀位於新北市新莊區的天主教輔仁大學，科系為醫學資訊學程。</br>
                         我是個喜歡觀察、分析、研究與推理事物的人，充滿好奇心，對任何事物都會全力以赴。
                         個性較於文靜，遇到問題時能主動面對及靈機應變，有時也被形容為古靈精怪。
-                        我的專長是繪畫與設計，我別享受從零開始創作的過程。
+                        我的專長是繪畫與設計，我別享受從零開始創作的過程。</br>
                         因此，我對網頁與程式設計充滿想法與憧憬，期待能將我的想法與技術結合，打造獨特的作品。
                     </p>
                     <div class="about-skill">
@@ -56,6 +63,7 @@
                             <li>Html</li>
                             <li>CSS</li>
                             <li>Java</li>
+                            <li>Angular</li>
                             <li>C#</li>
                             <li>VSCode</li>
                             <li>VSStudio</li>
@@ -74,16 +82,19 @@
                         <a href="#"><img src="images/Project 1.png" alt="Project 1" /></a>
                     </div>
                     <div class="project-content">
-                        <h4 class="project-heading">作品一</h4>
+                        <h4 class="project-heading">病人就醫開單資訊及提醒系統</h4>
+                        <hr>
                         <p class="project-desc">
-                            隨著醫療科技的快速進步，遠距醫療及數位化健康管理系統逐漸普及，極大提升了患者的就醫便利性。
+                            此作品為大三專題製作的醫療資訊系統。
+                            研究動機為隨著醫療科技的快速進步，遠距醫療及數位化健康管理系統逐漸普及，極大提升了患者的就醫便利性。
                             然而，隨著人口老化和慢性病患者的增加，醫療系統面臨的壓力也隨之上升。
                             患者在就醫過程中，仍可能遭遇一些困難，例如就診流程繁瑣、多種紙本單據的管理負擔。
                             特別是在醫院提供的單據中，檢查單、檢驗單數量龐大，容易造成患者的混淆與誤用。
                             此外，紙本資料不僅管理不便，也可能導致重要資訊遺失或延誤，進一步影響患者的治療進度及效果。
                             因此，如何有效簡化就醫流程並協助患者更好地管理就醫資訊，成為目前醫療服務的重要課題。
+
                         </p>
-                        <a href="#" class="btn-primary btn-project">Demo</a>
+                        <a href="https://youtu.be/L6PpKNNqt3M" class="btn-primary btn-project">Demo</a>
                     </div>
                  </article>
                  <!-- Project 2 -->
@@ -108,8 +119,16 @@
         </section>
         <section id="contact">
             <div class="container">
-                <h3 class="section-heading">聯絡我</h3>
-                <span class="contact-desc">~ 聯絡我 ~</span>
+                <div>
+                    <h3 class="section-heading">聯絡我</h3>
+                    <span onclick="changeToAbout();" class="contact-desc">感謝您的觀看</span>
+                    <span onclick="changeToExps();" class="contact-desc1">⮕點此查看我的聯絡方式⬅</span>
+                </div>
+                <div id="aboutcon" class="contact-desc2">歡迎聯絡我！</div>
+                <div id="exps" style="display: none" class="contact-desc2">
+                    <span>聯絡電話：0987654321</span>
+                    <span>郵件地址：bbb@gmail.com</span>
+                </div>
                 <a href="mailto:bbb@gmail.com" class="btn-primary btn-contact">寄信給我！</a>
             </div>
         </section>
@@ -132,5 +151,12 @@
             </ul>
         </div>
     </footer>
+    <a href="#home" id="top"><img src="images/up.svg" alt="go to top"></a>
+    <script>
+        const btn = document.querySelector(".menu-btn")
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("clicked")
+        })
+    </script>
 </body>
 </html>
