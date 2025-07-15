@@ -102,6 +102,48 @@ main{
     color: var(--color-tertiary);
 }
 
+/*下拉容器設為相對定位*/
+.header-nav .dropdown {
+    position: relative;
+}
+
+/*下拉選單預設隱藏*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /*出現在下方*/
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    min-width: 160px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+/*選單項目樣式*/
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--color-tertiary);
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+/* 滑過dropdown顯示子選單 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 選單hover效果 */
+.dropdown-menu li a:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
 #home{
     height: calc(100dvh - var(--header-height)); /*動態視窗高度*/
     display: grid;
@@ -208,6 +250,12 @@ main{
     background-color: white;
     color: var(--color-tertiary);
     font-weight: 700;
+    transition: all 0.45s;
+}
+.about-skill-list li:hover{ /*滑鼠移動過度效果*/
+    transform: scale(1.25);
+    background-color: #3D7878;
+    color: #ffffff;
 }
 
 /*  */
@@ -259,6 +307,8 @@ main{
     margin-top: 3rem;
 }
 
+
+
 /*  */
 /* carousel */
 /*  */
@@ -309,6 +359,15 @@ main{
     cursor: pointer;
     padding: 0.3rem 0.8rem;
     border-radius: 8px;
+}
+
+/*  */
+/* activity */
+/*  */
+
+#activity{
+    background-color: var(--color-primary);
+    color: var(--color-tertiary)
 }
 
 /*  */
@@ -549,5 +608,10 @@ footer{
     }
     .contact-desc{
         font-size: 1.3rem;
+    }
+
+    /*下拉選單預設隱藏*/
+    .dropdown-menu {
+        left: 60px;
     }
 }
