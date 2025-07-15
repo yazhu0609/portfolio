@@ -47,6 +47,9 @@
         </section>
         <section id="about">
             <div class="container about-container">
+                <div class="about-pic">
+                    <img src="images/me.jpg" alt="autor-gina">
+                </div>
                 <h3 class="section-heading">關於我</h3>
                 <div class="about-section">
                     <p>
@@ -132,10 +135,10 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h4 class="project-heading">病歷表單</h4>
+                        <h4 class="project-heading">掛號病歷表單</h4>
                         <hr/>
                         <p class="project-desc">
-                            本系統實作一個診所掛號功能，提供使用者填寫個人病歷資訊的HTML表單，
+                            此為程式設計課程，實作一個診所出診掛號時需填寫的表單，提供使用者填寫個人病歷資訊的HTML表單，
                             包含基本資料（如姓名、身分證字號、性別、出生日期、聯絡方式）以及病史、過敏藥物等相關欄位。
                             使用者填寫完畢後，透過HTTP的POST方法將表單資料傳送至後端的Servlet程式。Servlet接收到表單資料後，
                             透過JDBC連線至MySQL資料庫，將該筆病人資料插入到預先設計好的資料表中，確保資料完整儲存並具備後續查詢與管理的功能。
@@ -143,6 +146,38 @@
                             包括其所填寫的所有欄位內容，供使用者確認，達成掛號流程的資料建立與回饋顯示。
                         </p>
                         <a href="https://youtu.be/L6PpKNNqt3M" class="btn-primary btn-project">Demo</a>
+                    </div>
+                 </article>
+                 <!-- Project 4 -->
+                 <article class="project">
+                    <div class="project-image">
+                        <a href="https://drive.google.com/file/d/1bQtLVX7NagL-Bx5BOOl1jW_d9Hhsa8tl/view?usp=share_link"><img src="images/Project 4.png" alt="Project 4" /></a>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-heading">電子病歷</h4>
+                        <hr/>
+                        <p class="project-desc">
+                            此為在電子病歷課程，實作一個病歷資訊管理系統。
+                            採用 ASP.NET MVC 架構，從資料庫設計出發，建立 Patient Table 並對應 ViewModel 與 DBModel，
+                            實作包含資料的新增、查詢、修改與刪除（CRUD）功能。透過 Controller 負責畫面載入與資料處理邏輯，
+                            前端以 HTML 和 Script 製作互動表單，實現從畫面輸入到資料庫儲存的完整流程。
+                        </p>
+                        <a href="https://drive.google.com/file/d/1bQtLVX7NagL-Bx5BOOl1jW_d9Hhsa8tl/view?usp=share_link" class="btn-primary btn-project">Demo</a>
+                    </div>
+                 </article>
+                 <!-- Project 5 -->
+                 <article class="project">
+                    <div class="project-image">
+                        <a href="https://youtu.be/KQyvYbmdxWY?si=Ec5PHg9B5Iz-Cwwt"><img src="images/Project 5.png" alt="Project 5" /></a>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-heading">貪食蛇小遊戲</h4>
+                        <hr/>
+                        <p class="project-desc">
+                            使用工具：Java、IntelliJ IDEA。
+                            簡介：使用者近功能有暫停、繼續及離開遊戲。吃到對應的圖案會失敗、加速以及加分。
+                        </p>
+                        <a href="https://youtu.be/KQyvYbmdxWY?si=Ec5PHg9B5Iz-Cwwt" class="btn-primary btn-project">Demo</a>
                     </div>
                  </article>
             </div>
@@ -182,11 +217,6 @@
         </div>
     </footer>
     <a href="#home" id="top"><img src="images/up.svg" alt="go to top"></a>
-    <script>
-        const btn = document.querySelector(".menu-btn")
-        btn.addEventListener("click", () => {
-            btn.classList.toggle("clicked")
-        })
-    </script>
+
 </body>
 </html>

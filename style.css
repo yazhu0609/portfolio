@@ -55,11 +55,15 @@ main{
     content: "";
     position: absolute;/*絕對定位*/
     background-color: var(--color-tertiary);
-    bottom: -10px;
+    bottom: -5px;
     width: 3rem;
     height: 0.1rem;
     translate: -50%;/*自己往回移動*/
     left: 50%;
+}
+
+.hide{
+    transform: translateY(300%);
 }
 
 /*  */
@@ -161,6 +165,10 @@ main{
     text-align: justify;
 }
 
+.about-pic{
+    display: none;
+}
+
 .about-section > * {/*子層選擇器*/
     width: 50%;
 }
@@ -256,7 +264,7 @@ main{
 /*  */
 .carousel {
     position: sticky;
-    top: calc(var(--header-height) + 1.5rem);
+    /*top: calc(var(--header-height) + 1.5rem);*/
     z-index: 1;
     border-radius: 30px;
     overflow: hidden;
@@ -377,6 +385,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s;
 }
 
 #top img{
@@ -391,9 +400,14 @@ footer{
         grid-template-columns: 1fr;
         padding: 1rem;
     }
+    .project + .project{
+        margin-top: 2rem;
+    }
     .project-heading{
         text-align: center;
         padding-bottom: 0.5rem;
+        position: static;
+        padding-top: 0;
     }
     .project-desc{
         margin-top: 0.5rem;
@@ -471,5 +485,69 @@ footer{
 
     .clicked .bar3{
         transform: translate(0, -11px) rotate(-45deg);
+    }
+
+    .hero-pic{
+        display: none;
+    }
+
+    .hero-container > *{
+        width: 100%;
+    }
+
+    .about-pic{
+        display: flex;
+    }
+    .about-pic{
+    display: flex;
+    justify-content: center;
+    }
+
+    .about-content{
+        width: 100%;
+    }
+
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-pic img{
+        max-width: 80%;
+        border-radius: 30px; 
+    }
+    .about-section p{
+        padding: 0;
+    }
+    .about-skill{
+        padding: 2rem 0 0;
+    }
+
+    #top{
+        right: 1rem;
+        bottom: 1rem;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
+    #top img{
+        width: 25px;
+        height: 25px;
+    }
+    .project-heading {
+        font-size: 1.3rem;
+    }
+    .project-desc{
+        font-size: 1rem;
+    }
+    .about-section p{
+        font-size: 1rem;
+    }
+    .section-heading{
+        font-size: 1.5rem;
+    }
+    .contact-desc{
+        font-size: 1.3rem;
     }
 }
