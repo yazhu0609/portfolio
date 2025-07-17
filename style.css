@@ -618,9 +618,8 @@ footer{
     .contact-desc{
         font-size: 1.3rem;
     }
-
-    /*下拉選單預設隱藏*/
     .dropdown-menu {
-        left: 60px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
