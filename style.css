@@ -370,6 +370,15 @@ main{
     color: var(--color-tertiary)
 }
 
+.activity-heading{
+    background-color: var(--color-primary);
+}
+
+.btn-activity{
+    background-color: white;
+    color: var(--color-tertiary);
+}
+
 /*  */
 /* Contact */
 /*  */

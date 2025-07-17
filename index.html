@@ -36,7 +36,14 @@
                         <li><a href="#project5">貪食蛇小遊戲</a></li>
                     </ul>
                 </li>
-                <li><a href="#activity">Activity</a></li>
+
+                <li class="dropdown">
+                    <a href="#activity">Activity</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#activity1">2024 iTHome鐵人賽</a></li>
+                        <li><a href="#activity2">2023 台灣醫療科技展</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -73,6 +80,7 @@
                         <span>我擅長的：</span>
                         <ul class="about-skill-list">
                             <li>JavaScript</li>
+                            <li>TypeScript</li>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Java</li>
@@ -184,8 +192,10 @@
                         <h4 class="project-heading">貪食蛇小遊戲</h4>
                         <hr/>
                         <p class="project-desc">
-                            使用工具：Java、IntelliJ IDEA。
-                            簡介：使用者近功能有暫停、繼續及離開遊戲。吃到對應的圖案會失敗、加速以及加分。
+                            使用軟體為IntelliJ IDEA，語言為Java。
+                            使用者進入遊戲則馬上開始遊戲，畫面主要分為三個區域，左側的畫面上呈現三個小圖示：吃到炸彈則立即結束遊戲、
+                            吃到鞋子則每吃一次加速1.5倍、吃到草莓則會加一分；右側的畫面顯示蛇的長度、生存時間以及分數；
+                            最下方的畫面則分成三個按鈕，由左至右分別是暫停、繼續及離開遊戲。
                         </p>
                         <a href="https://youtu.be/KQyvYbmdxWY?si=Ec5PHg9B5Iz-Cwwt" class="btn-primary btn-project">Demo</a>
                     </div>
@@ -195,18 +205,37 @@
         <section id="activity">
             <div class="container">
                 <h3 class="section-heading">活動參與</h3>
-                <!-- Ａctivity 1 -->
-                 <article class="project">
+                <!-- Activity 1 -->
+                 <article id="activity1" class="project">
                     <div class="project-image">
-                        <a href="https://ithelp.ithome.com.tw/users/20169228/articles"><img src="images/Project 1.png" alt="Project 1" /></a>
+                        <img src="images/Activity 1.png" alt="Activity 1" /></a>
                     </div>
                     <div class="project-content">
-                        <h4 class="project-heading">2024iTHome鐵人賽</h4>
+                        <h4 class="project-heading activity-heading">2024 iTHome鐵人賽</h4>
                         <hr/>
                         <p class="project-desc">
                             此作品為大三時參與2024iTHome鐵人賽，製作的題目為：R語言初學紀錄。
                         </p>
-                        <a href="https://ithelp.ithome.com.tw/users/20169228/articles" class="btn-primary btn-project">查看參賽網址！</a>
+                        <a href="https://ithelp.ithome.com.tw/users/20169228/articles" class="btn-primary btn-project btn-activity">查看參賽網址！</a>
+                    </div>
+                 </article>
+                 <!-- Activity 2 -->
+                 <article id="activity2" class="project">
+                    <div class="project-image activity">
+                        <img src="images/Activity 2.JPG" alt="Activity 2" />
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-heading activity-heading">2023 台灣醫療科技展</h4>
+                        <hr/>
+                        <p class="project-desc">
+                            2023年11月30日參加位於南港展覽館的台灣醫療科技展。
+                        </p>
+                        <a href="documents/2023醫療科技展.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="btn-primary btn-project btn-activity">
+                            查看參展紀錄！
+                            </a>
                     </div>
                  </article>
             </div>
